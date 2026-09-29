@@ -30,7 +30,7 @@ on:
 
 jobs:
   hubcap:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, hubcap]
     timeout-minutes: 45
     environment: ${{ github.event.inputs.environment || (github.event_name == 'pull_request' && 'test') || 'production' }}
 
